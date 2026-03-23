@@ -1,0 +1,6 @@
+flask
+flask-cors
+pymongo
+pydantic
+pydantic[email]
+python-dotenv

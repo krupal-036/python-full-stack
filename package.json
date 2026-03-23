@@ -1,0 +1,21 @@
+{
+  "name": "mfrp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-frontend": "cd frontend && npm run dev",
+    "start-backend": "cd backend && python3 index.py",
+    "dev": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
+    "build": "cd frontend && npm run build && cd .. && shx rm -rf backend/public && shx cp -r frontend/dist backend/public",
+    "prod": "npm run build && npm run start-backend"
+  },
+  "keywords": [],
+  "author": "krupal-fataniya",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "shx": "^0.4.0"
+  }
+}
